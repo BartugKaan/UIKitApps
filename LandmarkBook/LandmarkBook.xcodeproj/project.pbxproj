@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81BE5DA329FAAC520066D04E /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BE5DA229FAAC520066D04E /* Landmark.swift */; };
 		81F6B80F29FA7D900093DB33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F6B80E29FA7D900093DB33 /* AppDelegate.swift */; };
 		81F6B81129FA7D900093DB33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F6B81029FA7D900093DB33 /* SceneDelegate.swift */; };
 		81F6B81329FA7D900093DB33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F6B81229FA7D900093DB33 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81BE5DA229FAAC520066D04E /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 		81F6B80B29FA7D900093DB33 /* LandmarkBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandmarkBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81F6B80E29FA7D900093DB33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81F6B81029FA7D900093DB33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		81BE5DA129FAAB650066D04E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81BE5DA229FAAC520066D04E /* Landmark.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		81F6B80229FA7D900093DB33 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +97,7 @@
 		81F6B80D29FA7D900093DB33 /* LandmarkBook */ = {
 			isa = PBXGroup;
 			children = (
+				81BE5DA129FAAB650066D04E /* Models */,
 				81BE5DA029FAAA720066D04E /* Controllers */,
 				81BE5D9F29FAAA690066D04E /* Views */,
 				81BE5D9E29FAAA580066D04E /* Supporting Files */,
@@ -169,6 +180,7 @@
 				81F6B82329FA88AD0093DB33 /* DetailsVC.swift in Sources */,
 				81F6B80F29FA7D900093DB33 /* AppDelegate.swift in Sources */,
 				81F6B81129FA7D900093DB33 /* SceneDelegate.swift in Sources */,
+				81BE5DA329FAAC520066D04E /* Landmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

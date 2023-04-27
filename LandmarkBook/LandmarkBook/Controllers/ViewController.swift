@@ -13,6 +13,14 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     
     var landmarkNames = [String]()
     var landmarkImages = [UIImage]()
+    var landmark = [
+        Landmark(name: "Colosseum", image: .init(named: "colosseum")!),
+        Landmark(name: "Great Wall", image: .init(named: "greatWall")!),
+        Landmark(name: "Kremlin", image: .init(named: "kremlin")!),
+        Landmark(name: "Stonhenge", image: .init(named: "stonehenge")!),
+        Landmark(name: "Taj Mahal", image: .init(named: "tajMahal")!),
+        Landmark(name: "Galata Tower", image: .init(named: "galataKulesi")!)
+    ]
     
     var chosenLandmarkName = ""
     var chosenLandmarkImage = UIImage()
@@ -24,33 +32,19 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         
         
         
-        landmarkNames.append("Colosseum")
-        landmarkNames.append("Great Wall")
-        landmarkNames.append("Kremlin")
-        landmarkNames.append("Stonhenge")
-        landmarkNames.append("Taj Mahal")
-        landmarkNames.append("Galata Tower")
-        
-        
-        landmarkImages.append(UIImage(named: "colosseum")!)
-        landmarkImages.append(UIImage(named: "greatWall")!)
-        landmarkImages.append(UIImage(named: "kremlin")!)
-        landmarkImages.append(UIImage(named: "stonehenge")!)
-        landmarkImages.append(UIImage(named: "tajMahal")!)
-        landmarkImages.append(UIImage(named: "galataKulesi")!)
         
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return landmarkNames.count
+        return landmark.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         var content = cell.defaultContentConfiguration()
-        content.text = landmarkNames[indexPath.row]
-        content.image = landmarkImages[indexPath.row]
+        content.text = landmark[indexPath.row].name
+        content.image = landmark[indexPath.row].image
         content.imageProperties.maximumSize.width = 70
         content.imageProperties.maximumSize.height = 70
         content.imageProperties.cornerRadius = 10
@@ -60,8 +54,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        chosenLandmarkName = landmarkNames[indexPath.row]
-        chosenLandmarkImage = landmarkImages[indexPath.row]
+        chosenLandmarkName = landmark[indexPath.row].name
+        chosenLandmarkImage = landmark[indexPath.row].image
         performSegue(withIdentifier: "toDetailsVC", sender: nil)
     }
     
@@ -75,8 +69,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
-            self.landmarkNames.remove(at: indexPath.row)
-            self.landmarkImages.remove(at: indexPath.row)
+            self.landmark.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
