@@ -21,10 +21,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         Landmark(name: "Taj Mahal", image: .init(named: "tajMahal")!, country: "India"),
         Landmark(name: "Galata Tower", image: .init(named: "galataKulesi")!,country: "Turkey")
     ]
-    
-    var chosenLandmarkName = ""
-    var chosenLandmarkImage = UIImage()
-    var chosenLandmarkCountry = ""
+    var chosenLandmark : Landmark?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,18 +48,16 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        chosenLandmarkName = landmark[indexPath.row].name
-        chosenLandmarkImage = landmark[indexPath.row].image
-        chosenLandmarkCountry = landmark[indexPath.row].country
+        chosenLandmark = landmark[indexPath.row]
         performSegue(withIdentifier: "toDetailsVC", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailsVC"{
             let destinationVC = segue.destination as! DetailsVC
-            destinationVC.selectedLandmarkName = chosenLandmarkName
-            destinationVC.selectedLandmarkImage = chosenLandmarkImage
-            destinationVC.selectedLandmarkCountry = chosenLandmarkCountry
+            destinationVC.selectedLandmarkName = chosenLandmark!.name
+            destinationVC.selectedLandmarkImage = chosenLandmark!.image
+            destinationVC.selectedLandmarkCountry = chosenLandmark!.country
         }
     }
     

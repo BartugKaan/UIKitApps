@@ -57,8 +57,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="colosseum" translatesAutoresizingMaskIntoConstraints="NO" id="H9e-xw-zbJ">
                                 <rect key="frame" x="16" y="269" width="361" height="343"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPY-UV-s5i">
-                                <rect key="frame" x="175" y="197" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPY-UV-s5i">
+                                <rect key="frame" x="16" y="197" width="361" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -67,16 +67,18 @@
                         <viewLayoutGuide key="safeArea" id="O9z-OX-tZR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="dPY-UV-s5i" firstAttribute="top" secondItem="QYy-ik-p6T" secondAttribute="bottom" constant="3" id="35m-iP-1fu"/>
                             <constraint firstItem="O9z-OX-tZR" firstAttribute="trailing" secondItem="QYy-ik-p6T" secondAttribute="trailing" constant="16" id="BD9-5a-DsZ"/>
+                            <constraint firstItem="dPY-UV-s5i" firstAttribute="leading" secondItem="O9z-OX-tZR" secondAttribute="leading" constant="16" id="CfO-td-pOB"/>
+                            <constraint firstItem="dPY-UV-s5i" firstAttribute="top" secondItem="QYy-ik-p6T" secondAttribute="bottom" constant="3" id="UoA-Ib-thG"/>
                             <constraint firstItem="H9e-xw-zbJ" firstAttribute="top" secondItem="QYy-ik-p6T" secondAttribute="bottom" constant="75" id="bsU-Eo-e8G"/>
                             <constraint firstItem="O9z-OX-tZR" firstAttribute="trailing" secondItem="H9e-xw-zbJ" secondAttribute="trailing" constant="16" id="cTm-Hw-HMw"/>
                             <constraint firstItem="QYy-ik-p6T" firstAttribute="leading" secondItem="O9z-OX-tZR" secondAttribute="leading" constant="16" id="dNe-ht-XhM"/>
-                            <constraint firstItem="dPY-UV-s5i" firstAttribute="leading" secondItem="O9z-OX-tZR" secondAttribute="leading" constant="175" id="eDM-nx-Hm6"/>
                             <constraint firstItem="dPY-UV-s5i" firstAttribute="top" secondItem="QYy-ik-p6T" secondAttribute="bottom" constant="3" id="f34-rl-jr0"/>
+                            <constraint firstItem="O9z-OX-tZR" firstAttribute="trailing" secondItem="dPY-UV-s5i" secondAttribute="trailing" constant="16" id="jal-kG-8ji"/>
                             <constraint firstItem="H9e-xw-zbJ" firstAttribute="leading" secondItem="O9z-OX-tZR" secondAttribute="leading" constant="16" id="obC-hj-HiK"/>
                             <constraint firstItem="QYy-ik-p6T" firstAttribute="top" secondItem="O9z-OX-tZR" secondAttribute="top" constant="52" id="sOS-ci-m08"/>
                             <constraint firstItem="O9z-OX-tZR" firstAttribute="bottom" secondItem="H9e-xw-zbJ" secondAttribute="bottom" constant="206" id="uyd-SB-0wa"/>
-                            <constraint firstItem="O9z-OX-tZR" firstAttribute="trailing" secondItem="dPY-UV-s5i" secondAttribute="trailing" constant="176" id="w2O-7x-h8u"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ni9-dg-B2i"/>
