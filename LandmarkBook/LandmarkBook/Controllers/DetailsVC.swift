@@ -11,9 +11,11 @@ class DetailsVC: UIViewController {
 
     @IBOutlet weak var landmarkLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var countryLabel: UILabel!
     
     var selectedLandmarkName = ""
     var selectedLandmarkImage = UIImage()
+    var selectedLandmarkCountry = ""
     
     
     override func viewDidLoad() {
@@ -21,6 +23,7 @@ class DetailsVC: UIViewController {
 
         landmarkLabel.text = selectedLandmarkName
         imageView.image = selectedLandmarkImage
+        countryLabel.text = selectedLandmarkCountry
         
         
     }

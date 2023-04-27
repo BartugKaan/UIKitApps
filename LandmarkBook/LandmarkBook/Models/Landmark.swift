@@ -11,9 +11,11 @@ import UIKit
 struct Landmark{
     let name : String
     let image : UIImage
+    let country : String
     
-    init(name: String, image: UIImage) {
+    init(name: String, image: UIImage, country : String) {
         self.name = name
         self.image = image
+        self.country = country
     }
 }
