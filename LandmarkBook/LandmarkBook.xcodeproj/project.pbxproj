@@ -39,6 +39,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81BE5D9E29FAAA580066D04E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				81F6B80E29FA7D900093DB33 /* AppDelegate.swift */,
+				81F6B81029FA7D900093DB33 /* SceneDelegate.swift */,
+				81F6B81729FA7D910093DB33 /* Assets.xcassets */,
+				81F6B81929FA7D910093DB33 /* LaunchScreen.storyboard */,
+				81F6B81C29FA7D910093DB33 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81BE5D9F29FAAA690066D04E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				81F6B81429FA7D900093DB33 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		81BE5DA029FAAA720066D04E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				81F6B81229FA7D900093DB33 /* ViewController.swift */,
+				81F6B82229FA88AD0093DB33 /* DetailsVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		81F6B80229FA7D900093DB33 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +87,9 @@
 		81F6B80D29FA7D900093DB33 /* LandmarkBook */ = {
 			isa = PBXGroup;
 			children = (
-				81F6B80E29FA7D900093DB33 /* AppDelegate.swift */,
-				81F6B81029FA7D900093DB33 /* SceneDelegate.swift */,
-				81F6B81229FA7D900093DB33 /* ViewController.swift */,
-				81F6B82229FA88AD0093DB33 /* DetailsVC.swift */,
-				81F6B81429FA7D900093DB33 /* Main.storyboard */,
-				81F6B81729FA7D910093DB33 /* Assets.xcassets */,
-				81F6B81929FA7D910093DB33 /* LaunchScreen.storyboard */,
-				81F6B81C29FA7D910093DB33 /* Info.plist */,
+				81BE5DA029FAAA720066D04E /* Controllers */,
+				81BE5D9F29FAAA690066D04E /* Views */,
+				81BE5D9E29FAAA580066D04E /* Supporting Files */,
 			);
 			path = LandmarkBook;
 			sourceTree = "<group>";
@@ -292,7 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LandmarkBook/Info.plist;
+				INFOPLIST_FILE = "LandmarkBook/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,7 +342,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LandmarkBook/Info.plist;
+				INFOPLIST_FILE = "LandmarkBook/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
