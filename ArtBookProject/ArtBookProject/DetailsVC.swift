@@ -56,6 +56,8 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
         catch{
             print("error")
         }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "newData"), object: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc func hideKeyborad(){
