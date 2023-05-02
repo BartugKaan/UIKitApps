@@ -21,6 +21,35 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func getRatesClicked(_ sender: UIButton) {
+        
+        // 1) Request & Session
+        // 2) Response & Data
+        // 3) Parsing & Jsnon serialization
+        
+        //1.
+        let url = URL(string: "https://raw.githubusercontent.com/atilsamancioglu/CurrencyData/main/currency.json")
+        let session = URLSession.shared
+        //Closures
+        let task =  session.dataTask(with: url!) { (data, resposne, error) in
+            if error != nil{
+                let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+                alert.addAction(okButton)
+                self.present(alert, animated: true)
+            }
+            else{
+                
+                //2.
+                if data != nil{
+                    
+                }
+                
+            }
+        }
+        
+        
+    }
+    
 }
 
