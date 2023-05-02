@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var cadLabel: UILabel!
     @IBOutlet weak var chfLAbel: UILabel!
     @IBOutlet weak var gbpLabel: UILabel!
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func getRatesClicked(_ sender: UIButton) {
         
         // 1) Request & Session
@@ -39,17 +39,24 @@ class ViewController: UIViewController {
                 self.present(alert, animated: true)
             }
             else{
-                
                 //2.
                 if data != nil{
+                    do{
+                        let jsonResponse = try JSONSerialization.jsonObject(
+                            with: data!,
+                            options: JSONSerialization.ReadingOptions.mutableContainers)
+                        DispatchQueue.main.async {
+                            print(jsonResponse)
+                        }
+                        
+                    } catch{
+                        print("Error")
+                    }
                     
                 }
-                
             }
         }
-        
-        
+        task.resume()
     }
-    
 }
 
