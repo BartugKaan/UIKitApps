@@ -42,8 +42,8 @@ class CalculatorViewController: UIViewController {
     
     @IBAction func calculatePressed(_ sender: UIButton) {
         var pct = 0.0
-        var billValue = Double(billTextField.text!)
-        var splitNumberValue = Double(splitNumberLabel.text!)
+        let billValue = Double(billTextField.text!)
+        let splitNumberValue = Double(splitNumberLabel.text!)
 
         if tenPctButton.isSelected{
             pct = 0.1
