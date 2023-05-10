@@ -31,6 +31,8 @@ class CalculatorViewController: UIViewController {
         twentyPctButton.isSelected = false
         
         sender.isSelected = true
+        
+        billTextField.endEditing(true)
     }
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
@@ -39,16 +41,19 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
-        if zeroPctButton.isSelected{
-            print("0")
-        }
-        else if tenPctButton.isSelected{
-            print("0.1")
+        var pct = 0.0
+        var billValue = Double(billTextField.text!)
+        var splitNumberValue = Double(splitNumberLabel.text!)
+
+        if tenPctButton.isSelected{
+            pct = 0.1
         }
         else if twentyPctButton.isSelected{
-            print("0.2")
+            pct = 0.2
         }
-        print(splitNumberLabel.text!)
+        let totalBill = (billValue! * pct) + billValue!
+        let result = String(format: "%.2f", totalBill / splitNumberValue!)
+        print(result)
     }
     
 }
