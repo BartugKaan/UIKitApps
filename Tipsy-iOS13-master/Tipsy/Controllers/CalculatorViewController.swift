@@ -15,7 +15,10 @@ class CalculatorViewController: UIViewController {
     @IBOutlet weak var twentyPctButton: UIButton!
     @IBOutlet weak var splitNumberLabel: UILabel!
     
-    
+    var finalResult = "0.0"
+    var billTotal = 0.0
+    var numberOfPeope = 2
+    var tip = 0.10
     
     
     override func viewDidLoad() {
@@ -41,19 +44,31 @@ class CalculatorViewController: UIViewController {
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
-        var pct = 0.0
+        tip = 0.0
         let billValue = Double(billTextField.text!)
         let splitNumberValue = Double(splitNumberLabel.text!)
 
         if tenPctButton.isSelected{
-            pct = 0.1
+            tip = 0.1
         }
         else if twentyPctButton.isSelected{
-            pct = 0.2
+            tip = 0.2
         }
-        let totalBill = (billValue! * pct) + billValue!
+        let totalBill = (billValue! * tip) + billValue!
         let result = String(format: "%.2f", totalBill / splitNumberValue!)
-        print(result)
+        finalResult = result
+        numberOfPeope = Int(splitNumberValue!)
+        
+        self.performSegue(withIdentifier: "goToResults", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResults"{
+            let destinationVC = segue.destination as! ResultsViewController
+            destinationVC.result = finalResult
+            destinationVC.tip = Int(tip * 100)
+            destinationVC.split = numberOfPeope
+        }
     }
     
 }
