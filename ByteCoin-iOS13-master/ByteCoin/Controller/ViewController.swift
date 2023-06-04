@@ -17,13 +17,18 @@ class ViewController: UIViewController{
     @IBOutlet weak var bitcoinLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
+    @IBOutlet weak var refreshButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         coinManager.delegate = self
         currencyPicker.dataSource = self
         currencyPicker.delegate = self
-        // Do any additional setup after loading the view.
+        
+        refreshButton.layer.cornerRadius = 8
+        refreshButton.setImage(UIImage(systemName: "gobackward"),for: .normal)
+        refreshButton.setTitle("", for: .normal)
     }
 }
 
@@ -36,6 +41,10 @@ extension ViewController: CoinManagerDelegate {
             self.bitcoinLabel.text = price
             self.currencyLabel.text = currency
         }
+    }
+    
+    @IBAction func refreshButtonTapped(_ sender: UIButton) {
+        coinManager.getCoinPrice(for: currencyLabel.text!)
     }
     
     func didFailWithError(error: Error) {
