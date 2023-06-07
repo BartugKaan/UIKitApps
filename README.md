@@ -9,4 +9,4 @@ This repository has been created for the purpose of learning UIKit and the Swift
 
 
  ## Update about my Progress 
-After two months I finished most of the course and I realy enjoyes. Now my plan is to create my own projects with these stuff. Also  I will try to learn programmatic UI with swift and try to create new projects.
+After two months, I finished most of the course and I really enjoyed it. Now my plan is to create my own projects with this knowledge. I will also try to learn programmatic UI with Swift and create new projects.
