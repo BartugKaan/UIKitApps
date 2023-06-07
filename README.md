@@ -5,4 +5,8 @@ This repository has been created for the purpose of learning UIKit and the Swift
 
 | Start Date | Finish Date | Title           | State            |
 | ---------- | ----------- | --------------- | ---------------- |
-| 27/04/2023 | --/--/----  | Swift And UIKit | Working on it 👨‍💻 |
+| 27/04/2023 | 07/06/2023  | IOS & Swift - The Complete IOS App Development Bootcamp'| Finished 🥳|
+
+
+## Update about Progress
+After two months I finished most of the course and I realy enjoyes. Now my plan is to create my own projects with these stuff. Also  I will try to learn programmatic UI with swift and try to create new projects.
